@@ -10,11 +10,11 @@ function searchCondition() {
             function searchArray(array) {
                 return array.find(item => item.name.toLowerCase().includes(input));
             }
-
+            alert(data);
             // Search in countries, temples, and beaches
             let place = searchArray(data.countries.flatMap(country => country.cities)) ||
                     searchArray(data.temples) || searchArray(data.beaches) ;
-
+            alert(place);
             if (place) {
                 resultDiv.innerHTML += `<img src="${place.imageUrl}" alt="${place.name}">`;
                 resultDiv.innerHTML += `<h2>${place.name}</h2>`;
