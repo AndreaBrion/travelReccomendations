@@ -1,14 +1,12 @@
-alert('JavaScript file loaded');
 
 function searchCondition() {
     const input = document.getElementById('cityInput').value.toLowerCase();
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
 
-    console.log(input);
-    console.log(resultDiv); 
-    console.log(`Input: ${input}`);  // Debugging alert
-
+    alert(input);
+    alert(resultDiv); 
+    
     fetch('travel_Recommendation.json') // Ensure this path is correct
         .then(response => response.json())
         .then(data => { //data is the variable name used to hold the parsed JSON data. It represents the entire content of travel_Recommendation.json as a JavaScript object.
@@ -18,9 +16,10 @@ function searchCondition() {
             }
             
             // Search in countries, temples, and beaches
-            let place = searchArray(data.countries.flatMap(country => country.cities)) ||
-                    searchArray(data.temples) || searchArray(data.beaches) ;
-                    
+            let place = searchArray(data.countries.flatMap(country => country.cities)) || searchArray(data.temples) || searchArray(data.beaches) ;
+                
+            alert(place);
+
             if (place) {
                 resultDiv.innerHTML += `<img src="${place.imageUrl}" alt="${place.name}">`;
                 resultDiv.innerHTML += `<h2>${place.name}</h2>`;
