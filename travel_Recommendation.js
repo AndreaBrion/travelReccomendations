@@ -32,3 +32,17 @@ function searchCondition() {
 // Assuming you have a button with id 'citySearch'
 const btnSearch = document.getElementById('citySearch');
 btnSearch.addEventListener('click', searchCondition);
+
+function clearResults() {
+    // Clear the search results div
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
+
+    // Optionally clear the input field
+    const inputField = document.getElementById('conditionInput');
+    inputField.value = '';
+}
+
+// Assuming you have a button with id 'cityClear'
+const btnClear = document.getElementById('cityClear');
+btnClear.addEventListener('click', clearResults);
