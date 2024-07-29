@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The great site for travels recommendations</title>
+    <title>The greatest site for travel recommendations</title>
     <style>
         body {
             background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1128181.jpg&f=1&nofb=1&ipt=99ba60b8c7583aaaed5a98a22a1b5cf4da3bf2df6cf5b1cac1c10cb9136df6d4&ipo=images');
@@ -13,15 +13,17 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            color: white; /* Added for text visibility */
         }
         nav {
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            color: white;
+            padding: 10px 20px; /* Adjusted padding */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav h1 {
-            margin: 0;
-            font-size: 24px;
+        nav img {
+            height: 40px; /* Adjusted size for logo */
         }
         nav ul {
             list-style-type: none;
@@ -44,37 +46,65 @@
             border-radius: 5px;
         }
         nav ul li input[type="text"] {
-            padding: 5px;
+            padding: 5px 10px;
             margin-right: 10px;
             border: none;
-            border-radius: 3px;
+            border-radius: 20px; /* Adjusted for rounded corners */
+            width: 200px; /* Adjusted width */
         }
         nav ul li button {
             padding: 5px 10px;
             border: none;
-            border-radius: 3px;
+            border-radius: 20px; /* Adjusted for rounded corners */
             cursor: pointer;
+            background-color: teal; /* Added background color */
+            color: white; /* Added text color */
         }
         nav ul li button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .content {
+            text-align: center;
+            margin-top: 100px; /* Added margin for positioning */
+        }
+        .content h1 {
+            font-size: 48px; /* Adjusted font size */
+            margin: 0;
+        }
+        .content p {
+            font-size: 18px; /* Adjusted font size */
+            margin: 10px 0;
+        }
+        .content button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px; /* Adjusted for rounded corners */
+            background-color: teal; /* Added background color */
+            color: white; /* Added text color */
+            font-size: 18px; /* Adjusted font size */
+            cursor: pointer;
+        }
+        .content button:hover {
             background-color: rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
 <body>
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.creativefabrica.com%2Fwp-content%2Fuploads%2F2021%2F03%2F20%2FTravel-logo-design-Graphics-9786083-1.jpg&f=1&nofb=1&ipt=29ebf9dfdceee8a44fb47cd6fb8c6da5db099d16c0fa30ccaddc8f52795695bd&ipo=images" alt="Site Logo">
     <nav>
-        <h1>Travel Recommendations</h1>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.creativefabrica.com%2Fwp-content%2Fuploads%2F2021%2F03%2F20%2FTravel-logo-design-Graphics-9786083-1.jpg&f=1&nofb=1&ipt=29ebf9dfdceee8a44fb47cd6fb8c6da5db099d16c0fa30ccaddc8f52795695bd&ipo=images" alt="Site Logo">
         <ul>
             <li><a href="./index.html" id="home">Home</a></li>
-            <li><a href="./health_contact.html" id="about">About Us</a></li>
-            <li><a href="./health_contact.html" id="contact">Contact Us</a></li>
-            <li><input type="text" id="cityInput" placeholder="Enter Where To Travel"></li>
+            <li><a href="./about_us.html" id="about">About Us</a></li>
+            <li><a href="./contact_us.html" id="contact">Contact Us</a></li>
+            <li><input type="text" id="cityInput" placeholder="Enter a destination or keyword"></li>
             <li><button id="citySearch">Search</button></li>
             <li><button id="cityClear">Clear</button></li>
         </ul>
     </nav>
-    <h3>EXPLORE THE WORLD!</h3>
-    <p>Try our best suggestions and experience the best holiday of your life!</p>
-    <p>Our site is built to create great experiences and memories.</p>
+    <div class="content">
+        <h1>EXPLORE DREAM DESTINATION</h1>
+        <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+        <button>BOOK NOW</button>
+    </div>
 </body>
 </html>
