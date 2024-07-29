@@ -1,7 +1,11 @@
 function searchCondition() {
-    const input = document.getElementById('conditionInput').value.toLowerCase();
+    const input = document.getElementById('cityInput').value.toLowerCase();
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
+
+    console.log(input);
+    console.log(resultDiv); 
+    console.log(`Input: ${input}`);  // Debugging alert
 
     fetch('travel_Recommendation.json') // Ensure this path is correct
         .then(response => response.json())
@@ -10,11 +14,11 @@ function searchCondition() {
             function searchArray(array) {
                 return array.find(item => item.name.toLowerCase().includes(input));
             }
-            alert(data);
+            
             // Search in countries, temples, and beaches
             let place = searchArray(data.countries.flatMap(country => country.cities)) ||
                     searchArray(data.temples) || searchArray(data.beaches) ;
-            alert(place);
+                    
             if (place) {
                 resultDiv.innerHTML += `<img src="${place.imageUrl}" alt="${place.name}">`;
                 resultDiv.innerHTML += `<h2>${place.name}</h2>`;
@@ -38,7 +42,7 @@ function clearResults() {
     resultDiv.innerHTML = '';
 
     // Optionally clear the input field
-    const inputField = document.getElementById('conditionInput');
+    const inputField = document.getElementById('cityInput');
     inputField.value = '';
 }
 // Assuming you have a button with id 'cityClear'
