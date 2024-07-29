@@ -28,7 +28,6 @@ function searchCondition() {
             resultDiv.innerHTML = 'An error occurred while fetching data.';
         });
 }
-
 // Assuming you have a button with id 'citySearch'
 const btnSearch = document.getElementById('citySearch');
 btnSearch.addEventListener('click', searchCondition);
@@ -42,7 +41,6 @@ function clearResults() {
     const inputField = document.getElementById('conditionInput');
     inputField.value = '';
 }
-
 // Assuming you have a button with id 'cityClear'
 const btnClear = document.getElementById('cityClear');
 btnClear.addEventListener('click', clearResults);
